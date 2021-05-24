@@ -8,6 +8,7 @@ class TransacaoApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
