@@ -8,7 +8,26 @@ spring:
       ddl-auto: update
     show-sql: true
     open-in-view: off
+  security:
+    oauth2:
+       resourceserver:
+         jwt:
+           issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:18080/auth/realms/nosso-cartao}
+           jwk-set-uri: ${KEYCLOAK_JWKS_URI:http://localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/certs}
+
+#  Postman
+#http://localhost:18080/auth/realms/nosso-cartao/protocol/openid-connect/token
+#  - grant_type
+#  - client_id
+#  - client_secret
+#  - scope
+#  - username
+#  - password
+
 
 server:
   error:
     include-stacktrace: never
+
+
+

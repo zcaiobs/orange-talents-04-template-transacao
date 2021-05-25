@@ -27,7 +27,7 @@ public class TransacaoConsumerKafka {
         this.transacaoRepository = transacaoRepository;
     }
 
-    @Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 1000)
     public void consumer() {
        try {
            var records = consumer.poll(Duration.ofMillis(1000));
